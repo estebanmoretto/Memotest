@@ -1,0 +1,90 @@
+head{
+    height: 100vh;
+}
+body{
+    background-color: purple;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.mainSquare{
+    
+    display: none;
+    width: 300px;
+    background-color: aliceblue;
+    border: 12px solid black;
+    border-radius: 25px;
+    text-align: center;
+    margin: 10px;
+    padding: 3%;
+    padding-top: 0;
+        h1{
+            margin-bottom: 0%;
+            color: #3fadd3;
+        }
+        .inputName{
+            width: 100%;
+        }
+        .dificult{
+            margin: 5px;
+        }
+        button{
+            background-color: orange;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            height: 30px;
+            width: 100%;
+            margin: 3px;
+        }
+}
+.gameSheet{
+    
+    background-color: aliceblue;
+    width:70%;
+    height: 82%;
+    align-items: center;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    .columContainer{
+        width: 75%;
+        height: 75%;
+        perspective: 1000px;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+    }
+    .flip-box{
+      width: 22%;
+      height: 30%;
+      position: relative;
+      transition: transform 1s;
+      transform-style: preserve-3d;
+      margin: 1px 10px
+    }
+    .flip-box-front{
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      backface-visibility: hidden;
+    }
+    .flip-box-back{
+      background-color: blue;
+      height: 100%;
+      width: 100%;
+      transform: rotateY( 180deg );
+    }
+      img{
+          height: 100%;
+          width: 100%;
+      }
+      .flip-box.is-flipped {
+        transform: rotateY(180deg);
+      }
+    .blocked{
+        filter: grayscale(100%)
+    }
+
+      
+}
